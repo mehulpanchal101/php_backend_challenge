@@ -1,0 +1,35 @@
+I have attached POSTMAN Collection for API call file name BackendChellange.postman_collection
+
+I have created two new endpoints for migration and seeder for the table using core php. laravel provides such nice mechanisam for the migration and seeder.
+
+run complete `docker-compose up`
+
+then call http://localhost:8321/setup, for the automated seeding I have placed events.json file into migration folder. for easy seeding through API Call (Development Purpose only), whilte running this endpoint database table created and also event data also get filled.
+
+# for connecting to the database
+
+connect your docker container for sql-db-<\_> and run below command
+docker exec -it <container_id> sh
+mysql -u codingchallenge -p (and enter the password)
+SHOW databases; (will list all databases)
+USE codingchallenge;
+Select \* from events;
+
+for Rollback call http://localhost:8321/setup-rollback, Also added rollback endpoints for clear database and seeder.
+
+Also created configuration file, migration file that will setup the project as well.
+
+I have created models folder where I have kept event Class for the events table for sql oprations
+
+Endpoints.
+PART A
+http://localhost:8321/receive
+PART B
+http://localhost:8321/setup
+PART C-1
+http://localhost:8321/activity-by-user
+PART C-2
+http://localhost:8321/longest-activity
+
+PART-D For Test Case
+run vendor/bin/phpunit

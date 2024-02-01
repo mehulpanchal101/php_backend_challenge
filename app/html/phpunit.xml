@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true" bootstrap="vendor/autoload.php">
+    <testsuites>
+        <testsuite name="Unit Tests">
+            <directory>tests</directory>
+            
+        </testsuite>
+    </testsuites>
+<php>
+                <var name="DB_HOST" value="sql-db"/>
+                <var name="DB_USER" value="codingchallenge"/>
+                <var name="DB_PASS" value="codingchallenge"/>
+                <var name="DB_NAME" value="codingchallenge"/>
+            </php>
+</phpunit>
